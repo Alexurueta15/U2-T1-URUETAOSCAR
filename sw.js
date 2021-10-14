@@ -3,6 +3,9 @@ const CACHE_STATIC_NAME = 'static-cache';
 const CACHE_DYNAMIC_NAME = 'dynamic-cache';
 const CACHE_INMUTABLE_NAME = 'inmutable-cache';
 
+const swDirector =
+    window.location.href.includes("localhost") ? "" : "U2-T1-URUETAOSCAR/";
+
 function cleanCache(cacheName, sizeItems) {
     caches.open(cacheName)
         .then(cache => {
@@ -23,13 +26,13 @@ self.addEventListener('install', evt => {
     const promiseCache = caches.open(CACHE_STATIC_NAME)
         .then(cache => {
             return cache.addAll([
-                '/',
-                'index.html',
-                'img/p1.png',
-                'img/p2.png',
-                'img/p3.png',
-                'img/p4.png',
-                'js/app.js'
+                swDirector+'/',
+                swDirector+'index.html',
+                swDirector+'img/p1.png',
+                swDirector+'img/p2.png',
+                swDirector+'img/p3.png',
+                swDirector+'img/p4.png',
+                swDirector+'js/app.js'
             ]);
         });
 
