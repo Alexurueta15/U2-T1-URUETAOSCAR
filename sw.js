@@ -4,7 +4,7 @@ const CACHE_DYNAMIC_NAME = 'dynamic-cache';
 const CACHE_INMUTABLE_NAME = 'inmutable-cache';
 
 const swDirector =
-    window.location.href.includes("localhost") ? "" : "U2-T1-URUETAOSCAR/";
+    location.href.includes("localhost") ? "" : "U2-T1-URUETAOSCAR/";
 
 function cleanCache(cacheName, sizeItems) {
     caches.open(cacheName)
