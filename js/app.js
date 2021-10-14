@@ -19,7 +19,7 @@ btnRegresar.on('click', function (e){
 })
 
 const swDirector =
-    window.location.href.includes("localhost") ? "/sw.js" : "/Alexurueta15/U2-T1-URUETAOSCAR/sw.js";
+    window.location.href.includes("localhost") ? "/sw.js" : "/U2-T1-URUETAOSCAR/sw.js";
 
 if (navigator.serviceWorker){
     navigator.serviceWorker.register(swDirector);
