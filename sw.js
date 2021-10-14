@@ -24,7 +24,6 @@ self.addEventListener('install', evt => {
     const promiseCache = caches.open(CACHE_STATIC_NAME)
         .then(cache => {
             return cache.addAll([
-                '/',
                 'index.html',
                 'img/p1.png',
                 'img/p2.png',
